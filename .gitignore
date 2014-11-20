@@ -9,3 +9,33 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+
+# Scala/SBT Stuff
+*.class
+*.log
+.cache
+.history
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Ruby/Rails Stuff
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/spec/tmp
+**.orig
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+/.bundle/
+/lib/bundler/man/
+.rvmrc
