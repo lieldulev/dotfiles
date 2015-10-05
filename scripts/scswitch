@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TITLE="Scala Switch Script"
+TITLE="Scala Switch Script\n-------------------\nhttps://github.com/lieldulev/brew-scala-switcher"
 DISCLAMER="\nDISCLAMER: This script assumes you've installed scala versions using brew install scala/scala210/scala29."
 HELP="Usage: scswitch [VERSION]\n\nVERSION - Supports versions 2.9.*, 2.10.* and 2.11.*\n\nInstalled Versions:\n"
 SWITCHING="Switchd to: "
@@ -12,8 +12,6 @@ function list_versions () {
   list_211
   list_210
   list_29
-  #switch_to "/usr/local/Cellar/scala/2.11.2"
-  # "/usr/local/Cellar/scala/2.11"
 }
 
 function list_ver {
@@ -36,7 +34,7 @@ function list_210 () {
 }
 
 function list_29 () {
-  local ls_res=`ls /usr/local/Cellar/scala9/ 2>/dev/null`
+  local ls_res=`ls /usr/local/Cellar/scala29/ 2>/dev/null`
   list_ver "${ls_res#\n}" "9"
 }
 
@@ -77,7 +75,7 @@ function switchto_29 {
   switchto_x "${ls_res#\n}" "scala29" "2.9"
 }
 
-# EXCEUTING FROM HERE:
+# EXCEUTING STARTS HERE:
 
 # Help / List 
 if [ "$VERSION" = "" ]; then
